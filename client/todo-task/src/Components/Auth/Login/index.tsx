@@ -26,8 +26,8 @@ const Login = (props: Props) => {
     resolver: zodResolver(loginSchema),
   });
   console.log(errors);
-  const onSubmit = (data: LoginForm) => {
-    mutate(data, {
+  const onSubmit = async (data: LoginForm) => {
+    await mutate(data, {
       onSuccess: (data) => {
         setTokenStorage(data.token);
 

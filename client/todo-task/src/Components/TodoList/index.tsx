@@ -41,7 +41,7 @@ const TodoList = (props: Props) => {
       TaskList: updateTask,
       totalItems: tasks?.totalItems || 0,
     });
-    const URL = `task/update-task/${taskId}`;
+    const URL = `/api/task/update-task/${taskId}`;
 
     const token = getSession();
 
@@ -63,7 +63,7 @@ const TodoList = (props: Props) => {
       TaskList: deleteTaskList,
       totalItems: tasks?.totalItems || 0,
     });
-    const URL = `task/tasks/${taskId}`;
+    const URL = `/api/task/tasks/${taskId}`;
     try {
       const response = await apiClient.delete<DeleteTask>(URL);
       console.log("Task deleted successfully", response.data);
