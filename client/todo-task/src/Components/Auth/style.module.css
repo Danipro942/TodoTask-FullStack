@@ -1,0 +1,109 @@
+.login{
+ text-align: center;
+ color: #fff;
+}
+
+.login h1 {
+  margin: 0
+}
+
+.authForm {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.switchAuth{
+  color: #d8d0ff !important;
+}
+
+.authForm input {
+    outline: 0;
+    border: 0;
+    background-color: rgb(55 71 105);
+    padding: .8rem;
+    border-radius: 1rem;
+    margin: .8rem 0;
+  border: 1px solid rgb(55 71 105);
+  transition: all 0.4s ease 0s;
+
+
+}
+
+.authInput{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.authForm input::placeholder{
+    font-weight: 400;
+}
+
+.authForm button {
+width: 100%;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    padding: 1rem 0;
+    
+    background: linear-gradient(324deg, rgb(53 0 255 / 82%) 35%, rgb(44 107 255) 100%);
+    cursor: pointer;
+  transition: all 0.4s ease 0s;
+    
+}
+
+.authForm button:hover {
+    background: linear-gradient(324deg, rgb(53 0 255 / 82%) 35%, rgb(68, 0, 255) 100%);
+    opacity: 0.8;
+  transition: all 0.4s ease 0s;
+
+}
+
+.authForm p {
+  color: var(--thrith-text-color);
+}
+
+.authForm span {
+  color: var(--main-text-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login a{
+  display: inline-block;
+  /* padding: 1rem 0; */
+  font-size: 1.1rem;
+  text-align: left;
+  color: var(--main-text-color) ;
+  text-decoration: none;
+}
+
+.login a span{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Reset Passowrd */
+.resetPW {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% + 2rem);
+  
+}
+
+.resetPW form {
+  align-items: unset !important;
+  margin: 2rem;
+  font-size: 1.2rem;
+  user-select: none;
+  }
+
+.resetPW label{
+ text-align: left;
+ color: #ededed
+
+}

@@ -1,0 +1,43 @@
+.containerButton {
+    display: block;
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    border-radius: 1rem;
+
+  }
+  
+  .buttons button {
+    cursor: pointer;
+    padding: 1rem;
+    /* background-color: red; */
+    transition: all 0.3s ease 0s;
+    color: #000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .buttons button:nth-child(1){
+    border-radius: 1rem 0rem 0rem 1rem;
+    
+  }
+
+  .buttons button:nth-child(2){
+    border-radius: 0rem 1rem 1rem 0rem;
+    
+  }
+  
+  .buttons button:hover {
+    /* background-color: #8499a1; */
+    opacity: 90%;
+  }
+  
+  .active {
+    background-color: #7cebff88 !important;
+    backdrop-filter: blur(1rem);
+  }
+  

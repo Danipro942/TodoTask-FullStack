@@ -1,0 +1,7 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: calc(55% - 4rem);
+    cursor: pointer;
+}

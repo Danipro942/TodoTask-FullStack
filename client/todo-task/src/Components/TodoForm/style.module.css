@@ -1,0 +1,62 @@
+.todoForm{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.todoForm input {
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 1rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    background-color: #ffffffbb;
+    box-shadow: 0 4px 11px 2px rgb(0 0 0 / 26%);    
+    color: #000;
+    border: 1px solid transparent; /* Border inicial */
+    transition: all 0.3s ease; /* Transiciones suaves */
+}
+
+.todoForm textarea {
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 10rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    background-color: #ffffffbb;
+    box-shadow: 0 4px 11px 2px rgb(0 0 0 / 26%);    
+    color: #000;
+    overflow: hidden;
+    border: 1px solid transparent; /* Border inicial */
+    transition: all 0.3s ease; /* Transiciones suaves */
+}
+
+/* Estilo al hacer focus */
+.todoForm input:focus,
+.todoForm textarea:focus {
+    outline: none; /* Eliminamos el borde azul por defecto */
+    box-shadow: 0 8px 16px 5px rgb(0 0 0 / 26%);; /* Profundidad y color del borde */
+    border: 1px solid rgb(0 0 0 / 26%);; /* Border azul */
+    background-color: #f0f8ff; /* Un ligero cambio de color de fondo */
+}
+
+.todoForm button {
+    width: 100%;
+    box-shadow: 0 8px 16px 5px rgb(0 0 0 / 26%);; /* Profundidad y color del borde */
+    height: 4rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    background: linear-gradient(324deg, rgb(53 0 255 / 82%) 35%, rgb(44 107 255) 100%);
+    transition: all 1s ease; /* Transiciones suaves */
+
+}
+
+.todoForm button:hover {
+    transform: scale(1.02); 
+
+    transition: all .3s ease; /* Transiciones suaves */
+    
+}

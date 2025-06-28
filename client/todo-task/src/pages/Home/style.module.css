@@ -1,0 +1,39 @@
+.home{
+    color: #000;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(324deg, rgb(41 0 255 / 52%) 35%, rgb(106 241 249 / 56%) 100%);
+    /* padding: 2rem; */
+    display: flex;
+}
+
+.authContainer{
+    background-color: #f1f1f185;
+    backdrop-filter: blur(1rem);
+    border-radius: 1rem;
+    width: 30%;
+    height: auto;
+    margin: 2rem;
+    box-shadow: 0 4px 9px 7px rgb(0 0 0 / 26%)
+}
+
+.authContainer h1{ 
+    display: flex;
+}
+
+.authContainer h1 p {
+    font-size: 1rem;
+    margin-left: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+
+}
+
+.authContainer h1 p:hover{
+    text-decoration: underline;
+}
+
+.listContainer{
+    width: 70%;
+}
+
