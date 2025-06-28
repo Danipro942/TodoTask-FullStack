@@ -8,9 +8,11 @@ import { UserContext } from "../../../context/userContext";
 import useLogin from "../../../api/useLogin";
 import { toast } from "react-toastify";
 
-type Props = {};
+type Props = {
+  isAuth: () => void;
+};
 
-const Login = ({}: Props) => {
+const Login = ({ isAuth }: Props) => {
   const navigate = useNavigate();
   const { mutate } = useLogin();
 
@@ -25,14 +27,11 @@ const Login = ({}: Props) => {
     resolver: zodResolver(loginSchema),
   });
   console.log(errors);
-  const onSubmit = async (data: LoginForm) => {
-    await mutate(data, {
-      onSuccess: (data) => {
+  const onSubmit = (data: LoginForm) => {
+    mutate(data, {
+      onSuccess: async (data) => {
         setTokenStorage(data.token);
-
-        console.log("Sent Login", data);
-        toast.success("You've Login Sucessfully");
-
+        await isAuth();
         navigate("/");
       },
       onError: (err) => {

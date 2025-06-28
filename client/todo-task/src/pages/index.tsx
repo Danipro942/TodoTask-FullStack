@@ -15,11 +15,11 @@ import ChangePassword from "../Components/Auth/ResetPassword/ChangePassowrd";
 const AppRouter = () => {
   const [authenticated, setAuthenticated] = useState<boolean | null>(null);
 
+  const checkAuthentication = async () => {
+    const auth = await isAuth();
+    setAuthenticated(auth);
+  };
   useEffect(() => {
-    const checkAuthentication = async () => {
-      const auth = await isAuth();
-      setAuthenticated(auth);
-    };
     checkAuthentication();
   }, []);
 
@@ -38,7 +38,7 @@ const AppRouter = () => {
       element: <Auth />,
       children: [
         { path: "", element: <Navigate to="/auth/login" replace /> },
-        { path: "login", element: <Login /> },
+        { path: "login", element: <Login isAuth={checkAuthentication} /> },
         { path: "register", element: <Register /> },
         { path: "reset-password", element: <GetEmail /> },
         { path: "reset-password/:token?", element: <ChangePassword /> },
