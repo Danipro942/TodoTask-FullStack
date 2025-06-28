@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import axios, { AxiosError } from "axios";
 import { toast } from "react-toastify";
-import { useState } from "react";
 import {
   PasswordForm,
   PasswordSchema,
@@ -15,7 +14,7 @@ type ResetAnswer = {
   message: string;
 };
 
-const ChangePassword = (props: Props) => {
+const ChangePassword = ({}: Props) => {
   const navigate = useNavigate();
 
   const { token } = useParams();

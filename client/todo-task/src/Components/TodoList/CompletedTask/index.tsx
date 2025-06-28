@@ -1,6 +1,4 @@
-import React, { useState } from "react";
 import style from "./style.module.css";
-import { boolean } from "zod";
 
 type Props = {
   completeState: boolean;

@@ -4,14 +4,12 @@ import { useForm } from "react-hook-form";
 import { AddTaskForm, addTaskSchema } from "../../Schemas/Todo/AddTask";
 import addTask from "../../api/AddTask";
 import { toast } from "react-toastify";
-import { useContext } from "react";
-import { TaskContext } from "../../context/useTasks";
-import { set } from "zod";
+
 import { useQueryClient } from "@tanstack/react-query";
 
 type Props = {};
 
-const TodoForm = (props: Props) => {
+const TodoForm = ({}: Props) => {
   const { mutate } = addTask();
   const {
     register,

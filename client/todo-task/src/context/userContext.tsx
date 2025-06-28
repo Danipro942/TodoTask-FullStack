@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode, useEffect, useState } from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 import { jwtDecode } from "jwt-decode";
 import { UserType } from "../types/user";
 import { getSession, setSession } from "../utils/localStorage";
@@ -27,11 +27,6 @@ const userProvider = ({ children }: Props) => {
     } catch (error) {
       console.error("Error decoding token ", error);
     }
-  };
-
-  const clearSession = () => {
-    setSession("");
-    setUser(null);
   };
 
   useEffect(() => {

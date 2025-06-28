@@ -1,8 +1,6 @@
-import axios, {AxiosError} from 'axios'
-import { ErrorResponse, RegisterUser, UserResponse } from '../types/user'
-import { useMutation, useQuery } from '@tanstack/react-query'
-import { get } from 'react-hook-form'
-import { TasksList, TasksResponse } from '../types/tasks'
+import axios from 'axios'
+import {  useQuery } from '@tanstack/react-query'
+import { TasksResponse } from '../types/tasks'
 import { getSession } from '../utils/localStorage'
 
 

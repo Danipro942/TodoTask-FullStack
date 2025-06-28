@@ -1,6 +1,4 @@
-import axios from "axios";
 import UseGetTasks from "../../api/useGetTasks";
-import { getSession } from "../../utils/localStorage";
 import style from "./style.module.css";
 import TodoTask from "./TodoCard";
 import { useContext, useEffect, useState } from "react";
@@ -16,12 +14,11 @@ type DeleteTask = {
   message: string;
 };
 
-const TodoList = (props: Props) => {
+const TodoList = ({}: Props) => {
   const [completeState, setCompleteState] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const { data, isLoading } = UseGetTasks(currentPage, completeState);
+  const { data } = UseGetTasks(currentPage, completeState);
   const { setTasks, tasks } = useContext(TaskContext);
-  const token = getSession();
 
   useEffect(() => {
     if (data) {
@@ -42,8 +39,6 @@ const TodoList = (props: Props) => {
       totalItems: tasks?.totalItems || 0,
     });
     const URL = `/api/task/update-task/${taskId}`;
-
-    const token = getSession();
 
     try {
       const response = await apiClient.put<DeleteTask>(URL);

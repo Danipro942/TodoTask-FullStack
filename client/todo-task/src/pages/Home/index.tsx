@@ -3,12 +3,10 @@ import style from "./style.module.css";
 import { UserContext } from "../../context/userContext";
 import TodoForm from "../../Components/TodoForm";
 import TodoList from "../../Components/TodoList";
-import { useNavigate } from "react-router-dom";
 type Props = {};
 
-const Home = (props: Props) => {
+const Home = ({}: Props) => {
   const { user } = useContext(UserContext);
-  const navigate = useNavigate();
   console.log(user);
   const signOut = () => {
     localStorage.removeItem("session");

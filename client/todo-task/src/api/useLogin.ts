@@ -1,5 +1,5 @@
 import axios, {AxiosError} from 'axios'
-import { ErrorResponse, RegisterUser, UserResponse } from '../types/user'
+import { ErrorResponse, UserResponse } from '../types/user'
 import { useMutation } from '@tanstack/react-query'
 
 type LoginUser = {

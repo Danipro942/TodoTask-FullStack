@@ -10,10 +10,10 @@ import { setSession } from "../../../utils/localStorage";
 
 type Props = {};
 
-const Register = (props: Props) => {
+const Register = ({}: Props) => {
   const navigate = useNavigate();
 
-  const { mutate, isError } = useRegister();
+  const { mutate } = useRegister();
 
   const {
     handleSubmit,

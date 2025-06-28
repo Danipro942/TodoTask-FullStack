@@ -1,10 +1,6 @@
 import { MdOutlineDeleteOutline } from "react-icons/md";
-
-import { FaCheck } from "react-icons/fa";
 import style from "../style.module.css";
 import { TasksList } from "../../../types/tasks";
-import axios from "axios";
-import { getSession } from "../../../utils/localStorage";
 
 type Props = {
   task: TasksList;

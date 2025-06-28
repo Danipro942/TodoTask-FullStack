@@ -1,5 +1,5 @@
 import axios, {AxiosError} from 'axios'
-import { ErrorResponse, RegisterUser, UserResponse } from '../types/user'
+import { ErrorResponse } from '../types/user'
 import { useMutation } from '@tanstack/react-query'
 import { AddTaskResponse } from '../types/tasks'
 import { AddTaskForm } from '../Schemas/Todo/AddTask'

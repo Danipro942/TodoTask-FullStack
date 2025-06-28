@@ -9,7 +9,7 @@ type ResetAnswer = {
   message: string;
 };
 
-const GetEmail = (props: Props) => {
+const GetEmail = ({}: Props) => {
   const navigate = useNavigate();
 
   const { handleSubmit, register } = useForm<{ email: string }>();

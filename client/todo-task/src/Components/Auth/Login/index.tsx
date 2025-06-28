@@ -1,17 +1,16 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import style from "../style.module.css";
 import { zodResolver } from "@hookform/resolvers/zod";
-import userForm, { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { LoginForm, loginSchema } from "../../../Schemas/Auth/login";
 import { UserContext } from "../../../context/userContext";
 import useLogin from "../../../api/useLogin";
 import { toast } from "react-toastify";
-import { setSession } from "../../../utils/localStorage";
 
 type Props = {};
 
-const Login = (props: Props) => {
+const Login = ({}: Props) => {
   const navigate = useNavigate();
   const { mutate } = useLogin();
 
